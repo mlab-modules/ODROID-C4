@@ -36,24 +36,24 @@ difference () {
 
         ////////////////////////////////////
 	translate ([1, 66 , pedestal_height - 4.5]) // HOLE for ODROD's USB and Ethernet connectors
-	   cube([54,17.5,5]);
+	   cube([56,25,5]);
 
-	translate ([15, 7 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components
-	   cube([39,53,5]);
+	translate ([1.5, 7.5 , pedestal_height - 3.5]) // HOLE for ODROD's Passive components
+	   cube([55,51.5,5]);
 
-	translate ([19, 45 , pedestal_height - 3.5]) // eMMc Card
-	   cube([14,23,5]);
+	translate ([37, 37.5 , pedestal_height - 3.5]) // eMMc Card
+	   cube([22,14,5]);
 
-	translate ([0, 46 , pedestal_height - 3.5]) // SD Card
+	translate ([0, 39.5 , pedestal_height - 3.5]) // SD Card
 	   cube([17,14,5]);
 
 	translate ([2, 8 , pedestal_height - 1.7]) // IO connector
 	   cube([4.5,50.5,5]);
 
-	translate ([30, 3.5, pedestal_height - 3])  // ODROID serial connector
+	translate ([33, 3, pedestal_height - 3])  // ODROID serial connector
 	   cube([12,2,5]);
 
-    translate ([52, 19.5, pedestal_height - 3])  // USB selection jumper
+    translate ([52, 16, pedestal_height - 3])  // USB selection jumper
         cube([6,2.5,5]);
 
     translate ([52, 43, pedestal_height - 3])  // ODROID power connector
@@ -63,10 +63,10 @@ difference () {
         translate ([15,5.8, -3.0])  // ODROID eMMC adapter pocket
             cube([25,2,15]);
 
-    translate ([9,3.5, pedestal_height - 3])  // ODROID IR receiver
-	   cube([7.5,3,5]);
+    translate ([7.5,0, pedestal_height - 2])  // ODROID IR receiver
+	   cube([25,10,5]);
 
-    translate ([19,10, pedestal_height - 5])  // Heatsink mount holes
+    translate ([18,4, pedestal_height - 5])  // Heatsink mount holes
         cylinder (h = 6, r= 3, $fn=10);
 
     translate ([39,61.6, pedestal_height - 5])  // Heatsink mount holes
@@ -111,10 +111,10 @@ difference () {
                     MLAB_logo_long();
     }
 
-    translate ([50, 86.5, 4])  // ODROIDs passive components hole.
+    translate ([50, 86.5, 2])  // ODROIDs passive components hole.
         rotate ([90,0,180])
             linear_extrude(height = 0.5) {
-                text(text = "ODROID-C2", size = pedestal_height * 0.4);
+                text(text = "ODROID-C4", size = pedestal_height * 0.4);
             }
 
 }
